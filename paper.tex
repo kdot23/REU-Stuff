@@ -1,0 +1,63 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry} %sets the margins of the paper
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\title{Fun With \LaTeX}
+\author{Kelsey Lieberman}
+
+\begin{document}
+\maketitle
+
+\section{Math Problem}
+
+\textbf{Lemma 11.5.5.}
+If for every $0<\epsilon<1$, there exist a constant $c_\epsilon$ such that $K_i(\zeta,z)$ satisfies
+
+\begin{equation}
+ \int_{\zeta\in\omega_\delta} |r_\delta(\zeta_n)|^{-\epsilon}K_i(\zeta,z) \leq c_\epsilon|r_\delta(z_n)|^{-\epsilon} \textrm{ for all } z \in \omega_\delta \textrm{,}
+ \end{equation}
+
+\begin{equation}
+\int_{z\in\omega_\delta}|r_\delta(z_n)|^{-\epsilon}K_i(\zeta,z) \leq c_\epsilon|r_\delta(\zeta_n)|^{-\epsilon} \textrm{ for all }  \zeta \in \omega_\delta  \textrm{,}
+\end{equation}
+
+then for $1 < p < \infty$, there exists $c_p > 0$ such that
+
+$$||J_i(\alpha)||_{L^p(\omega_\delta)} \leq c_p||\alpha||_{L^p(\omega_\delta)}$$
+
+for all $\alpha \in L^p(\omega_\delta)$.
+
+
+
+\section{Image}
+\includegraphics[scale=0.25]{icecream}
+\centering
+
+\flushleft
+\section{Graph of Continuous Function}
+
+
+\begin{tikzpicture}
+	\begin{axis}[axis x line = center, 
+		axis y line=center,
+		ytick={-2,-1,...,2},
+		yticklabels={-2,-1,...,2},
+		xmin=-2.2,xmax=2.2, ymin=-2.2, ymax=2.2]
+		
+		\addplot[smooth,domain=-2:2]{x^3 - 2*x^2 + x + .25};
+		
+	\end{axis}
+
+\end{tikzpicture}
+		
+	
+\section{Scatter Plot}
+
+\section{Something Fun I Found With \LaTeX}
+
+\end{document}

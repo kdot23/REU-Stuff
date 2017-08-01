@@ -1,0 +1,40 @@
+
+\documentclass{beamer}
+\begin{document}
+
+\begin{frame}{Background}
+For the past 100 years, \textit{Cryphonectria parasitica}, a fungal blight, has been infecting American Chestnut trees through wounds on the tree which form cankers. 
+
+\medskip
+
+In an attempt to control the spread of the blight, two main strains of hypovirus have been introduced to the cankers formed by the blight. The hypovirus does not cure the cankers, but rather slows the growth rate and allows the tree to form ``healing cankers."
+%add pics of canker and trees!!
+\end{frame}
+
+\begin{frame}{Project Goals}
+Our data focuses mainly on a grove of chestnut trees at a site in West Salem, Wisconsin.
+
+\medskip
+
+We aim to model the dynamics of this tree community over time with the effects of the blight and hypovirus along with different treatment options, such as inoculation with the hypovirus or the hypothetical measure of cutting down infected trees.
+
+\medskip
+
+To model this, we introduce a Markov Decision Process, often used in Artificial Intelligence, which assesses the current health of the trees and advises the best policy for the highest long-term reward. This will give us a set of actions to perform to certain trees per year, which can hopefully be generalized to the West Salem site.
+
+\end{frame}
+
+
+\begin{frame}{Markov Decision Process}
+An MDP has several components
+$$ M = <S,A,P,R,T>$$
+\begin{enumerate}
+  \item $S = $ a set of \textbf{\textsl{states}} of the world (A 50x50 plot of tree sites which have trees of particular ratings)
+  \item $A=$ a set of \textbf{\emph{actions}} an agent can take
+  \item $P=$ a \textbf{\emph{state-transition function}}: $P(s, a, s')$ is the probability of ending up in state $s'$ if you start in state $s$ and you take action $a$: $P(s' \mid s,a)$
+  \item $R=$ a \textbf{\emph{reward function}}: $R(s, a, s')$ is the one-step reward you get if you go from state $s$ to state $s'$ after taking action $a$
+  \item $T=$ a \textbf{\emph{time horizon}} (how many steps)
+\end{enumerate}
+
+\end{frame}
+\end{document}
